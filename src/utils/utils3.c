@@ -6,7 +6,7 @@
 /*   By: kcisse <kcisse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:20:05 by kcisse            #+#    #+#             */
-/*   Updated: 2024/10/12 17:27:24 by kcisse           ###   ########.fr       */
+/*   Updated: 2024/10/14 17:11:02 by kcisse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,9 @@ int	check_img_ptr(t_data *data)
 		error = 1;
 	if (!data->shark->top_right || !data->shark->bottom_left)
 		error = 1;
-	if (!data->items_ptr || !data->blank_ptr)
+	if (!data->shark->bottom_right || !data->wall_ptr)
+		error = 1;
+	if (!data->items_ptr || !data->blank_ptr || !data->blank_ptr)
 		error = 1;
 	if (!data->exit_green_ptr || !data->exit_red_ptr)
 		error = 1;
